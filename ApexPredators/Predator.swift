@@ -1,0 +1,46 @@
+//
+//  Predator.swift
+//  ApexPredators
+//
+//  Created by Mohab Khalid on 15/09/2025.
+//
+
+import SwiftUICore
+
+struct Predator : Decodable, Identifiable {
+    let id: Int
+    let name: String
+    let type: PredatorType
+    let latitude: Double
+    let longitude: Double
+    let movies: [String]
+    let movieScenes: [MovieScene]
+    let link: String
+    var image: String {
+        name.lowercased().replacingOccurrences(of: " ", with: "")
+    }
+}
+
+
+struct MovieScene : Decodable {
+    let id: Int
+    let movie: String
+    let sceneDescription: String
+}
+
+enum PredatorType : String, Decodable{
+    case land
+    case air
+    case sea
+    
+    var background: Color {
+        switch self {
+        case .land:
+                .brown
+        case .air:
+                .teal
+        case .sea:
+                .blue
+        }
+    }
+}
