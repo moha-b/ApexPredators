@@ -6,6 +6,7 @@
 //
 
 import SwiftUICore
+import MapKit
 
 struct Predator : Decodable, Identifiable {
     let id: Int
@@ -19,14 +20,18 @@ struct Predator : Decodable, Identifiable {
     var image: String {
         name.lowercased().replacingOccurrences(of: " ", with: "")
     }
+    var location: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
 }
 
 
-struct MovieScene : Decodable {
+struct MovieScene : Decodable, Identifiable {
     let id: Int
     let movie: String
     let sceneDescription: String
 }
+
 
 enum PredatorType : String, Decodable, CaseIterable, Identifiable{
     case all
