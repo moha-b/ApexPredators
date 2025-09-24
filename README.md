@@ -99,10 +99,7 @@ The app uses a comprehensive JSON dataset (`jpapexpredators.json`) containing:
 
 <!-- Space reserved for demo video -->
 
-[![Demo Video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
-
-*Click the image above to watch the demo video*
-
+https://github.com/user-attachments/assets/16dc79e8-7413-4685-aab7-fd5330422ca2
 
 ## 📄 License
 
